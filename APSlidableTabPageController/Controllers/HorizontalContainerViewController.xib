@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="prf-wb-ofS" customClass="HorizontalContainerViewController" customModule="APSlidableTabPageController" customModuleProvider="target">
+            <layoutGuides>
+                <viewControllerLayoutGuide type="top" id="Ajb-Nk-yAT"/>
+                <viewControllerLayoutGuide type="bottom" id="DTf-eF-1Fl"/>
+            </layoutGuides>
+            <view key="view" contentMode="scaleToFill" id="sRh-uA-sXF">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9jE-hM-Bpa" userLabel="V Stack View">
+                        <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHd-qp-v9d" userLabel="Index Bar Scroll View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vCg-dN-8gk" userLabel="Index Bar Container View">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CYt-QL-zZw" userLabel="Bot Separator View">
+                                                <rect key="frame" x="-1" y="43" width="602" height="1"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="opD-fa-eMY"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5B-ZW-9cr" userLabel="Index Indicator View">
+                                                <rect key="frame" x="-25" y="39" width="50" height="5"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" placeholder="YES" id="NqJ-wm-MNA" userLabel="PlaceHolderWidth"/>
+                                                    <constraint firstAttribute="height" constant="5" id="Si7-xG-uT5"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="a5B-ZW-9cr" secondAttribute="bottom" id="4xY-Aw-qgw"/>
+                                            <constraint firstItem="CYt-QL-zZw" firstAttribute="width" secondItem="vCg-dN-8gk" secondAttribute="width" constant="1" id="FFg-MS-kvK"/>
+                                            <constraint firstAttribute="width" constant="600" placeholder="YES" id="O0e-oA-8I1" userLabel="PlaceHolderWidth = 600"/>
+                                            <constraint firstItem="a5B-ZW-9cr" firstAttribute="centerX" secondItem="vCg-dN-8gk" secondAttribute="leading" id="ToL-41-mfl"/>
+                                            <constraint firstAttribute="height" priority="999" constant="44" id="el8-ta-WKR"/>
+                                            <constraint firstAttribute="bottom" secondItem="CYt-QL-zZw" secondAttribute="bottom" id="j6S-CD-OsE"/>
+                                            <constraint firstItem="CYt-QL-zZw" firstAttribute="centerX" secondItem="vCg-dN-8gk" secondAttribute="centerX" id="jlW-8y-va5"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="vCg-dN-8gk" firstAttribute="top" secondItem="UHd-qp-v9d" secondAttribute="top" id="TD2-DZ-ftO"/>
+                                    <constraint firstAttribute="bottom" secondItem="vCg-dN-8gk" secondAttribute="bottom" id="YTy-UA-cIt"/>
+                                    <constraint firstItem="vCg-dN-8gk" firstAttribute="height" secondItem="UHd-qp-v9d" secondAttribute="height" id="cxk-fe-wpc"/>
+                                    <constraint firstAttribute="trailing" secondItem="vCg-dN-8gk" secondAttribute="trailing" id="dBF-1c-DXG"/>
+                                    <constraint firstItem="vCg-dN-8gk" firstAttribute="leading" secondItem="UHd-qp-v9d" secondAttribute="leading" id="hTS-zM-EqK"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="prf-wb-ofS" id="2JA-8s-qH7"/>
+                                    <outletCollection property="gestureRecognizers" destination="3Ba-jV-c19" appends="YES" id="qDp-XX-SEy"/>
+                                </connections>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVo-2h-TkI" userLabel="Content Scroll View">
+                                <rect key="frame" x="0.0" y="44" width="600" height="536"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z30-qp-on3" userLabel="Content Container View">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="600" placeholder="YES" id="tRd-Qm-dP9" userLabel="PlaceHolderWidth = 600"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="z30-qp-on3" firstAttribute="top" secondItem="FVo-2h-TkI" secondAttribute="top" id="Ffb-Rv-VOb"/>
+                                    <constraint firstItem="z30-qp-on3" firstAttribute="height" secondItem="FVo-2h-TkI" secondAttribute="height" id="Mz0-Pm-SuS"/>
+                                    <constraint firstAttribute="bottom" secondItem="z30-qp-on3" secondAttribute="bottom" id="UMh-Wy-p7v"/>
+                                    <constraint firstAttribute="trailing" secondItem="z30-qp-on3" secondAttribute="trailing" id="nGo-mX-iiP"/>
+                                    <constraint firstItem="z30-qp-on3" firstAttribute="leading" secondItem="FVo-2h-TkI" secondAttribute="leading" id="zaL-eL-cpU"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="prf-wb-ofS" id="4Vr-Wj-Iy3"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="9jE-hM-Bpa" secondAttribute="trailing" id="QQw-8f-kCp"/>
+                    <constraint firstItem="9jE-hM-Bpa" firstAttribute="top" secondItem="Ajb-Nk-yAT" secondAttribute="bottom" priority="999" id="TRd-mB-KDg"/>
+                    <constraint firstItem="9jE-hM-Bpa" firstAttribute="leading" secondItem="sRh-uA-sXF" secondAttribute="leading" id="WBL-Bb-Cks"/>
+                    <constraint firstItem="DTf-eF-1Fl" firstAttribute="top" secondItem="9jE-hM-Bpa" secondAttribute="bottom" priority="999" id="d9E-U2-SZk"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="contentContainerView" destination="z30-qp-on3" id="T4H-Tv-Toc"/>
+                <outlet property="contentScrollView" destination="FVo-2h-TkI" id="Lnj-IY-PbI"/>
+                <outlet property="indexBarContainerView" destination="vCg-dN-8gk" id="8nh-XC-jHE"/>
+                <outlet property="indexBarHeightConstraint" destination="el8-ta-WKR" id="9NA-kx-DB4"/>
+                <outlet property="indexBarScrollView" destination="UHd-qp-v9d" id="YTb-hr-GLS"/>
+                <outlet property="indexIndicatorView" destination="a5B-ZW-9cr" id="jWA-hd-crB"/>
+                <outlet property="indexIndicatorViewCenterXConstraint" destination="ToL-41-mfl" id="f4X-3A-KUy"/>
+            </connections>
+            <point key="canvasLocation" x="460" y="452"/>
+        </viewController>
+        <tapGestureRecognizer id="3Ba-jV-c19" userLabel="Index Bar Tap Gesture Recognizer">
+            <connections>
+                <action selector="onIndexBarTapped:" destination="prf-wb-ofS" id="ZDh-w7-7Qa"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

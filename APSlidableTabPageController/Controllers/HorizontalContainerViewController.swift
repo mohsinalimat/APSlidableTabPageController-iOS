@@ -14,9 +14,15 @@ import UIKit
 public struct HorizontalContainerCreator {
     
     static public func horizontalContainerWithViewControllers(viewControllers: [UIViewController]) -> HorizontalContainerViewController {
-        let horizontalCtrlNib = UINib(nibName: "HorizontalContainerViewController", bundle: NSBundle.frameworkBundle()).instantiateWithOwner(nil, options: nil)
+        
+        let horizontalCtrlNib = UINib(
+            nibName: "HorizontalContainerViewController",
+            bundle: NSBundle(forClass: HorizontalContainerViewController.self))
+            .instantiateWithOwner(nil, options: nil)
+
         let horizontalCtrl = horizontalCtrlNib.first as! HorizontalContainerViewController
         horizontalCtrl.viewControllers = viewControllers
+
         return horizontalCtrl
     }
     

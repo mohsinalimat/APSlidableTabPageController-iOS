@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "APSlidableTabPageController"
   s.summary          = "A slidable tab page controller written in Swift."
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
   s.homepage         = "https://github.com/apegroup/APSlidableTabPageController-iOS"
   s.license          = 'MIT'
   s.author           = { "apegroup AB" => "support@apegroup.com" }

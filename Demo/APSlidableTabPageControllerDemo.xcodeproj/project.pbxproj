@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18C5669A1C60ACCE00FE6124 /* APSlidableTabPageController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F28CE5B1C50F55800835E73 /* APSlidableTabPageController.framework */; };
+		18C5669B1C60ACCE00FE6124 /* APSlidableTabPageController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F28CE5B1C50F55800835E73 /* APSlidableTabPageController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5FA8E5191C50F4B100DCE0E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8E5181C50F4B100DCE0E5 /* AppDelegate.swift */; };
 		5FA8E5201C50F4B100DCE0E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA8E51F1C50F4B100DCE0E5 /* Assets.xcassets */; };
 		5FA8E5231C50F4B100DCE0E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA8E5211C50F4B100DCE0E5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		18C5669C1C60ACCE00FE6124 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F28CE561C50F55800835E73 /* APSlidableTabPageController.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FA8E4F61C50F41400DCE0E5;
+			remoteInfo = APSlidableTabPageController;
+		};
 		5F28CE5A1C50F55800835E73 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5F28CE561C50F55800835E73 /* APSlidableTabPageController.xcodeproj */;
@@ -29,6 +38,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		18C5669E1C60ACCE00FE6124 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				18C5669B1C60ACCE00FE6124 /* APSlidableTabPageController.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5F28CE561C50F55800835E73 /* APSlidableTabPageController.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = APSlidableTabPageController.xcodeproj; path = ../../APSlidableTabPageController.xcodeproj; sourceTree = "<group>"; };
 		5FA8E5151C50F4B100DCE0E5 /* APSlidableTabPageControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APSlidableTabPageControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C5669A1C60ACCE00FE6124 /* APSlidableTabPageController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,11 +119,13 @@
 				5FA8E5111C50F4B100DCE0E5 /* Sources */,
 				5FA8E5121C50F4B100DCE0E5 /* Frameworks */,
 				5FA8E5131C50F4B100DCE0E5 /* Resources */,
+				18C5669E1C60ACCE00FE6124 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				5F28CE5E1C50F74E00835E73 /* PBXTargetDependency */,
+				18C5669D1C60ACCE00FE6124 /* PBXTargetDependency */,
 			);
 			name = APSlidableTabPageControllerDemo;
 			productName = APSlidableTabPageControllerDemo;
@@ -179,6 +205,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		18C5669D1C60ACCE00FE6124 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = APSlidableTabPageController;
+			targetProxy = 18C5669C1C60ACCE00FE6124 /* PBXContainerItemProxy */;
+		};
 		5F28CE5E1C50F74E00835E73 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = APSlidableTabPageController;
@@ -285,6 +316,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = APSlidableTabPageControllerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -297,6 +329,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = APSlidableTabPageControllerDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

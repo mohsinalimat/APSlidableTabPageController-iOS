@@ -132,8 +132,8 @@ public class HorizontalContainerViewController: UIViewController, UIScrollViewDe
     }
     
     private func indexBarElementWidthMultiplier() -> CGFloat {
-        let maxNumberOfElementsPerScreen = 3
-        let numberOfElements = viewControllers.count > 0 ? viewControllers.count : 1
+        let maxNumberOfElementsPerScreen = 3.5
+        let numberOfElements = Double(viewControllers.count > 0 ? viewControllers.count : 1)
         let multiplier = numberOfElements > maxNumberOfElementsPerScreen ?
             CGFloat(1) / CGFloat(maxNumberOfElementsPerScreen) :
             CGFloat(1) / CGFloat(numberOfElements)
